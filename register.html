@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Itim&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Notable&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+  <link rel="shortcut icon" href="images/roga-logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Roga</title>
+</head>
+<body>
+  <main>
+    <div class="roga-content-container">
+      <div class="roga-header">
+        <div class="logo-container">
+          <img src="images/roga-logo.png" alt="roga`s logo">
+          <p>roga.ru</p>
+        </div>
+        <div class="side-menu-container" id="menuNavigationId" onclick="window.location.href = 'main_page.html';">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#63DB53" class="bi bi-house" viewBox="0 0 16 16">
+            <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+          </svg>
+          <p>Главная страница</p>
+        </div>
+      </div>
+      <div class="roga-main-image-container">
+        <img src="images/user_auto_shop_about.png" alt="roga main image">
+        <p>Roga</p>
+      </div>
+      <form id="registrationForm">
+        <p class="form-title">Registration</p>
+        <p class="input-title">Логин главного администратора</p>
+        <input type="text" name="Root Admin Login" id="inputRootAdminLoginId" title="Введите логин главного администратора" minlength="8" maxlength="64" required>
+        <p class="input-title">Пароль главного администратора</p>
+        <input type="password" name="Root Admin Password" id="inputRootAdminPasswordId" title="Введите пароль главного администратора" minlength="8" maxlength="64" required> 
+        <p class="input-title">Логин</p>
+        <input type="text" name="Login" id="inputLoginId" minlength="8" maxlength="64" required>
+        <p class="input-title">Электронная почта</p>
+        <input type="text" name="Email" id="inputEmailId" minlength="8" maxlength="64" pattern=".+@.+" required>
+        <p class="input-title">Пароль</p>
+        <input type="password" name="Password" id="inputPasswordId" minlength="8" maxlength="64" required>
+        <input type="submit" value="Регистрация" id="RegistrationSubmit">
+      </form>
+      <div class="roga-footer">
+        <div class="law-info-container">
+          <p class="description">Roga.ru все права защищены</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="js/prepare_db.js"></script>
+  <script src="js/create_user.js"></script>
+</body>
+</html>
